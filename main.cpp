@@ -1,44 +1,45 @@
+using namespace std;
 #include <iostream>
 #include <vector>
 #include "LinkedLists.h"
 
 int main() {
-    std::vector<int> v;
+    vector<int> v;
     int n;
-    std::cout << "Enter the number of integers to input: ";
-    std::cin >> n;
+    cout << "Enter the number of integers to input: ";
+    cin >> n;
     for (int i = 0; i < n; i++) {
         int num;
-        std::cout << "Enter integer " << i + 1 << ": ";
-        std::cin >> num;
+        cout << "Enter integer " << i + 1 << ": ";
+        cin >> num;
         v.push_back(num);
     }
 
     LinkedList list;
     Node* head = list.createList(v);
 
-    std::cout << "Original list: ";
+    cout << "Original list: ";
     list.printList();
 
     int firstValue, secondValue;
-    std::cout << "Enter first value to search for: ";
-    std::cin >> firstValue;
-    std::cout << "Enter second value to insert: ";
-    std::cin >> secondValue;
+    cout << "Enter first value to search for: ";
+    cin >> firstValue;
+    cout << "Enter second value to insert: ";
+    cin >> secondValue;
 
     list.insertAfter(firstValue, secondValue);
-    std::cout << "List after insertions: ";
+    cout << "List after insertions: ";
     list.printList();
 
     int removeValue;
-    std::cout << "Enter value to remove: ";
-    std::cin >> removeValue;
+    cout << "Enter value to remove: ";
+    cin >> removeValue;
     list.removeNode(removeValue);
-    std::cout << "List after removal: ";
+    cout << "List after removal: ";
     list.printList();
 
     int sum = list.sumNodes();
-    std::cout << "Sum of all nodes: " << sum << std::endl;
+    cout << "Sum of all nodes: " << sum << endl;
 
     return 0;
 }

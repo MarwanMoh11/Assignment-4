@@ -1,3 +1,4 @@
+using namespace std;
 #include "LinkedLists.h"
 
 LinkedList::LinkedList() {
@@ -32,7 +33,7 @@ void LinkedList::removeNode(int value) {
         current = current->next;
     }
     if (current == nullptr) {
-        std::cout << "Value not found in list" << std::endl;
+        cout << "Value not found in list" << endl;
         return;
     }
     if (previous == nullptr) {
@@ -48,13 +49,13 @@ void LinkedList::removeNode(int value) {
 void LinkedList::printList() {
     Node* current = head;
     while (current != nullptr) {
-        std::cout << current->value << " (" << current->count << ") -> ";
+        cout << current->value << " (" << current->count << ") -> ";
         current = current->next;
     }
-    std::cout << "nullptr" << std::endl;
+    cout << "nullptr" << endl;
 }
 
-Node* LinkedList::createList(std::vector<int> v) {
+Node* LinkedList::createList(vector<int> v) {
     for (int i = v.size() - 1; i >= 0; i--) {
         int value = v[i];
         Node* current = head;

@@ -1,3 +1,4 @@
+using namespace std;
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
@@ -22,7 +23,7 @@ public:
     void addNode(int value);
     void removeNode(int value);
     void printList();
-    Node* createList(std::vector<int> v);
+    Node* createList(vector<int> v);
     int sumNodes();
     void insertAfter(int firstValue, int secondValue);
 };
